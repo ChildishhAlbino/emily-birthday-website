@@ -1,0 +1,36 @@
+.overlay {
+	font-size: 10vmax;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.arrow {
+	opacity: 0.01;
+	color: white;
+}
+.arrow:hover {
+	color: #663399;
+	opacity: 0.4;
+}
+
+.content {
+	word-wrap: break-word;
+	align-self: center;
+	justify-self: center;
+	text-align: center;
+}
+
+.container {
+	height: 100vh;
+	display: grid;
+}
+
+.content,
+.overlay {
+	img {
+		z-index: -1;
+	}
+	grid-area: 1 / 1;
+}
