@@ -62,7 +62,6 @@ const Arrows = (props) => {
 									context.state.changeAnimation(slideLeft);
 								}}
 								to={props.previous}
-								state={{ animation: slideLeft }}
 							>
 								<FaArrowLeft className="arrow" />
 							</Link>
@@ -71,7 +70,6 @@ const Arrows = (props) => {
 									context.state.changeAnimation(slideRight);
 								}}
 								to={props.next}
-								state={{ animation: slideRight }}
 							>
 								<FaArrowRight className="arrow" />
 							</Link>

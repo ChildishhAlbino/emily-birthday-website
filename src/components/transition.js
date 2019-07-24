@@ -3,7 +3,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Context } from './layout';
 
 const timeout = 550;
-const def = {
+const defaultAnimation = {
 	entering: {
 		position: `fixed`,
 		left: -2000,
@@ -30,8 +30,7 @@ class Transition extends React.PureComponent {
 		return (
 			<Context.Consumer>
 				{(context) => {
-					console.log(context);
-					const transitionAnimation = context.state.animation || def;
+					const transitionAnimation = context.state.animation || defaultAnimation;
 					return (
 						<TransitionGroup>
 							<CSSTransition
