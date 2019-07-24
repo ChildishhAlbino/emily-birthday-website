@@ -4,8 +4,9 @@ import { Link } from 'gatsby';
 import './arrows.scss';
 
 const Arrows = (props) => {
+	console.log(props);
 	return (
-		<main className="container">
+		<main className="container arrows">
 			<div className="content">{props.children}</div>
 			<div className="overlay">
 				<Link to={props.previous}>
@@ -18,9 +19,5 @@ const Arrows = (props) => {
 		</main>
 	);
 };
-
-// Arrows.propTypes = {
-// 	children: PropTypes.node.isRequired
-// };
 
 export default Arrows;
