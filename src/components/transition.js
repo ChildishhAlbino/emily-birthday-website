@@ -1,5 +1,7 @@
 import React from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Context } from './layout';
+
 const timeout = 550;
 const def = {
 	entering: {
@@ -25,28 +27,34 @@ const def = {
 class Transition extends React.PureComponent {
 	render() {
 		const { children, location } = this.props;
-		const transitionAnimation = location.state.animation || def;
-		console.log(transitionAnimation);
 		return (
-			<TransitionGroup>
-				<CSSTransition
-					key={location.pathname}
-					timeout={{
-						enter: 0,
-						exit: timeout
-					}}
-				>
-					{(status) => (
-						<div
-							style={{
-								...transitionAnimation[status]
-							}}
-						>
-							{children}
-						</div>
-					)}
-				</CSSTransition>
-			</TransitionGroup>
+			<Context.Consumer>
+				{(context) => {
+					console.log(context);
+					const transitionAnimation = context.state.animation || def;
+					return (
+						<TransitionGroup>
+							<CSSTransition
+								key={location.pathname}
+								timeout={{
+									enter: 0,
+									exit: timeout
+								}}
+							>
+								{(status) => (
+									<div
+										style={{
+											...transitionAnimation[status]
+										}}
+									>
+										{children}
+									</div>
+								)}
+							</CSSTransition>
+						</TransitionGroup>
+					);
+				}}
+			</Context.Consumer>
 		);
 	}
 }

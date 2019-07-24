@@ -8,6 +8,7 @@ body {
 }
 
 .overlay {
+	// position: absolute;
 	font-size: 10vmax;
 	display: flex;
 	flex-flow: row nowrap;
@@ -25,8 +26,5 @@ body {
 
 .content,
 .overlay {
-	img {
-		z-index: -1;
-	}
 	grid-area: 1 / 1;
 }
