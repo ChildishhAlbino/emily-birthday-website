@@ -1,10 +1,9 @@
 import React from 'react';
-import { FaArrowRight, FaArrowLeft } from 'react-icons/Fa';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'gatsby';
 import './arrows.scss';
 
 const Arrows = (props) => {
-	console.log(props);
 	return (
 		<main className="container arrows">
 			<div className="content">{props.children}</div>
