@@ -1,5 +1,5 @@
 import React from 'react';
-import KDAEmily from '../images/kdaemily.png';
+import KDAEmily from '../images/kda-emily.png';
 const IndexPage = () => (
 	<div>
 		<h1>HAPPY BIRTHDAY EMILY</h1>
