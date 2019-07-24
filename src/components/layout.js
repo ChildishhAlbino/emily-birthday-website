@@ -4,8 +4,22 @@ import './layout.scss';
 import PageTransition from './transition';
 import { useStaticQuery, graphql } from 'gatsby';
 import Arrows from './arrows';
+
+const Context = React.createContext();
+
+class ContextProvider extends React.Component {
+	state = {
+		animation: null,
+		changeAnimation: (animation) => {
+			this.setState({ animation: animation });
+		}
+	};
+	render() {
+		return <Context.Provider value={{ state: this.state }}>{this.props.children}</Context.Provider>;
+	}
+}
+
 const Layout = ({ children, location }) => {
-	// console.log(props);
 	const pages = [];
 	const data = useStaticQuery(graphql`
 		query MyQuery {
@@ -38,12 +52,14 @@ const Layout = ({ children, location }) => {
 		location.state = {};
 	}
 	return (
-		<div className="container">
-			<PageTransition location={location}>
-				<div className="content">{children}</div>
-			</PageTransition>
-			<Arrows className="overlay" next={pages[nextPageIndex]} previous={pages[previousPageIndex]} />
-		</div>
+		<ContextProvider>
+			<div className="container">
+				<PageTransition location={location}>
+					<div className="content">{children}</div>
+				</PageTransition>
+				<Arrows className="overlay" next={pages[nextPageIndex]} previous={pages[previousPageIndex]} />
+			</div>
+		</ContextProvider>
 	);
 };
 
@@ -52,3 +68,4 @@ Layout.propTypes = {
 };
 
 export default Layout;
+export { Context };

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'gatsby';
 import './arrows.scss';
+import { Context } from './layout';
 
 const timeout = 550;
 const slideLeft = {
@@ -50,17 +51,33 @@ const slideRight = {
 
 const Arrows = (props) => {
 	return (
-		<main className="container arrows">
-			<div className="content">{props.children}</div>
-			<div className="overlay">
-				<Link to={props.previous} state={{ animation: slideLeft }}>
-					<FaArrowLeft className="arrow" />
-				</Link>
-				<Link to={props.next} state={{ animation: slideRight }}>
-					<FaArrowRight className="arrow" />
-				</Link>
-			</div>
-		</main>
+		<Context.Consumer>
+			{(context) => {
+				return (
+					<main className="container arrows">
+						<div className="content">{props.children}</div>
+						<div className="overlay">
+							<Link
+								onClick={() => {
+									context.state.changeAnimation(slideLeft);
+								}}
+								to={props.previous}
+							>
+								<FaArrowLeft className="arrow" />
+							</Link>
+							<Link
+								onClick={() => {
+									context.state.changeAnimation(slideRight);
+								}}
+								to={props.next}
+							>
+								<FaArrowRight className="arrow" />
+							</Link>
+						</div>
+					</main>
+				);
+			}}
+		</Context.Consumer>
 	);
 };
 
