@@ -37,7 +37,13 @@ module.exports = {
 				display: `minimal-ui`
 			}
 		},
-		`gatsby-plugin-transition-link`
+		{
+			resolve: `gatsby-plugin-layout`,
+			options: {
+				component: require.resolve(`./src/components/layout.js`)
+			}
+		}
+
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.app/offline
 		// 'gatsby-plugin-offline',

@@ -1,16 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import Arrows from '../components/arrows';
 
 const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+	<Arrows previous={'/'} next={'/'}>
+		<div>
+			<h1>THIS IS THE SECOND PAGE</h1>
+		</div>
+	</Arrows>
+);
 
-export default SecondPage
+export default SecondPage;
