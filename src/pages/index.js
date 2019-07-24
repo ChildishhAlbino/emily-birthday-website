@@ -2,7 +2,8 @@ import React from 'react';
 
 const IndexPage = () => (
 	<div>
-		<h1>THIS IS PAGE ONE</h1>
+		<h1>HAPPY BIRTHDAY EMILY</h1>
+		<p />
 	</div>
 );
 
