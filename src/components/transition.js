@@ -5,19 +5,19 @@ import { Context } from './layout';
 const timeout = 550;
 const defaultAnimation = {
 	entering: {
-		position: `fixed`,
+		position: `absolute`,
 		left: -2000,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
 	},
 	entered: {
-		position: `fixed`,
+		position: `absolute`,
 		left: 0,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
 	},
 	exiting: {
-		position: `fixed`,
+		position: `absolute`,
 		left: 2000,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'

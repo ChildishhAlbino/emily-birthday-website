@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+body::-webkit-scrollbar {
+	display: none; // Safari and Chrome
+}
+
 body {
-	background-color: gray;
+	background-image: url('../images/website-background.png');
+	color: white;
+	font-family: "Oswald";
+	text-align: center;
+	-ms-overflow-style: none; // IE 10+
+	scrollbar-width: none; // Firefox
 }
 
 .container {
@@ -16,14 +27,25 @@ body {
 }
 
 .content {
+	div {
+		padding: 1em;
+		display: flex;
+		flex-flow: column nowrap;
+		align-content: center;
+		justify-content: center;
+	}
 	display: flex;
-	word-wrap: break-word;
-	align-items: center;
+	align-content: center;
 	justify-content: center;
-	height: 100vh;
 }
 
 .content,
 .overlay {
 	grid-area: 1 / 1;
+}
+
+img {
+	align-self: center;
+	max-width: 80vw;
+	max-height: 50vh;
 }

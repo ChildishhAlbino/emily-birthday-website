@@ -8,19 +8,19 @@ const timeout = 550;
 const slideLeft = {
 	title: 'slideLeft',
 	entering: {
-		position: `fixed`,
+		position: `absolute`,
 		left: -2000,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
 	},
 	entered: {
-		position: `fixed`,
+		position: `absolute`,
 		left: 0,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
 	},
 	exiting: {
-		position: `fixed`,
+		position: `absolute`,
 		left: 2000,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
@@ -30,19 +30,19 @@ const slideLeft = {
 const slideRight = {
 	title: 'slideRight',
 	entering: {
-		position: `fixed`,
+		position: `absolute`,
 		left: 2000,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
 	},
 	entered: {
-		position: `fixed`,
+		position: `absolute`,
 		left: 0,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
 	},
 	exiting: {
-		position: `fixed`,
+		position: `absolute`,
 		left: -2000,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
