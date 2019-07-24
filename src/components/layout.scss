@@ -1,4 +1,32 @@
 body {
-	margin: 0px;
 	background-color: gray;
+}
+
+.container {
+	height: 100vh;
+	display: grid;
+}
+
+.overlay {
+	font-size: 10vmax;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+	word-wrap: break-word;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.content,
+.overlay {
+	img {
+		z-index: -1;
+	}
+	grid-area: 1 / 1;
 }

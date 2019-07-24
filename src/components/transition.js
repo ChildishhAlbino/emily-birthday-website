@@ -1,7 +1,7 @@
 import React from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const timeout = 550;
-const getTransitionStyles = {
+const def = {
 	entering: {
 		position: `fixed`,
 		left: -2000,
@@ -19,31 +19,27 @@ const getTransitionStyles = {
 		left: 2000,
 		transition: `left ${timeout}ms ease-in-out`,
 		width: '100vw'
-	},
-	exited: {
-		position: `fixed`,
-		left: -2000,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
 	}
 };
 
 class Transition extends React.PureComponent {
 	render() {
 		const { children, location } = this.props;
+		const transitionAnimation = location.state.animation || def;
+		console.log(transitionAnimation);
 		return (
 			<TransitionGroup>
 				<CSSTransition
 					key={location.pathname}
 					timeout={{
-						enter: timeout,
+						enter: 0,
 						exit: timeout
 					}}
 				>
 					{(status) => (
 						<div
 							style={{
-								...getTransitionStyles[status]
+								...transitionAnimation[status]
 							}}
 						>
 							{children}
