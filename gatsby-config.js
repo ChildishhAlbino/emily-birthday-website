@@ -21,6 +21,13 @@ module.exports = {
 				path: path.join(__dirname, `src`, `images`)
 			}
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `markdown`,
+				path: path.join(__dirname, `src`, `markdown`)
+			}
+		},
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sass`,
 		`gatsby-transformer-remark`,
