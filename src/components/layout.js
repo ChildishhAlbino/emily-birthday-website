@@ -8,7 +8,7 @@ import Timer from '../components/timer';
 import { slideLeft } from './animations';
 
 const Context = React.createContext();
-const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-02') : moment('2019-08-01');
+const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-08-01') : moment('2019-08-01');
 class ContextProvider extends React.Component {
 	state = {
 		animation: slideLeft,
