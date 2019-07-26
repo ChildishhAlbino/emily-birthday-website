@@ -62,3 +62,5 @@ export default Transition;
 // credit to -> https://scotch.io/tutorials/animated-page-transitions-in-gatsby-websites#toc-option-1-adding-page-transitions-with-react-transition-group
 
 // I was scratching my head for ages on this one
+
+// Context consumer allows state to be passed up and down between parent and child elements easily.
