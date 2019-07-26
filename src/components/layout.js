@@ -6,9 +6,8 @@ import Arrows from './arrows';
 import moment from 'moment';
 import Timer from '../components/timer';
 import { slideLeft } from './animations';
-
 const Context = React.createContext();
-const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-08-01') : moment('2019-08-01');
+const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-01') : moment('2019-08-01');
 class ContextProvider extends React.Component {
 	state = {
 		animation: slideLeft,
@@ -29,9 +28,9 @@ class ContextProvider extends React.Component {
 const Layout = ({ children, location }) => {
 	if (moment().isSameOrBefore(countdownDate)) {
 		return (
-			<div>
+			<main>
 				<Timer countdownDate={countdownDate} />
-			</div>
+			</main>
 		);
 	} else {
 		const pages = [];
@@ -66,12 +65,12 @@ const Layout = ({ children, location }) => {
 		}
 		return (
 			<ContextProvider>
-				<div className="container">
+				<main className="container">
 					<PageTransition location={location}>
 						<div className="content">{children}</div>
 					</PageTransition>
 					<Arrows className="overlay" next={pages[nextPageIndex]} previous={pages[previousPageIndex]} />
-				</div>
+				</main>
 			</ContextProvider>
 		);
 	}
