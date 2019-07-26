@@ -5,14 +5,20 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Arrows from './arrows';
 import moment from 'moment';
 import Timer from '../components/timer';
+import { slideLeft } from './animations';
 
 const Context = React.createContext();
-const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-08-02') : moment('2019-08-01');
+const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-02') : moment('2019-08-01');
 class ContextProvider extends React.Component {
 	state = {
-		animation: null,
+		animation: slideLeft,
+		animating: false,
 		changeAnimation: (animation) => {
-			this.setState({ animation: animation });
+			this.setState({ animation: animation, animating: true });
+			setTimeout(this.state.toggleAnimating, 700);
+		},
+		toggleAnimating: () => {
+			this.setState({ animating: !this.state.animating });
 		}
 	};
 	render() {
@@ -43,7 +49,6 @@ const Layout = ({ children, location }) => {
 		data.allSitePage.edges.forEach((element) => {
 			const path = element.node.path;
 			if (!path.includes('404')) {
-				console.log(path);
 				pages.push(path);
 			}
 		});

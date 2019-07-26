@@ -3,79 +3,39 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'gatsby';
 import './arrows.scss';
 import { Context } from './layout';
-
-const timeout = 550;
-const slideLeft = {
-	title: 'slideLeft',
-	entering: {
-		position: `absolute`,
-		left: -2000,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	},
-	entered: {
-		position: `absolute`,
-		left: 0,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	},
-	exiting: {
-		position: `absolute`,
-		left: 2000,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	}
-};
-
-const slideRight = {
-	title: 'slideRight',
-	entering: {
-		position: `absolute`,
-		left: 2000,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	},
-	entered: {
-		position: `absolute`,
-		left: 0,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	},
-	exiting: {
-		position: `absolute`,
-		left: -2000,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	}
-};
+import { slideLeft, slideRight } from './animations';
 
 const Arrows = (props) => {
 	return (
 		<Context.Consumer>
 			{(context) => {
-				return (
-					<main className="container arrows">
-						<div className="content">{props.children}</div>
-						<div className="overlay">
-							<Link
-								onClick={() => {
-									context.state.changeAnimation(slideLeft);
-								}}
-								to={props.previous}
-							>
-								<FaArrowLeft className="arrow" />
-							</Link>
-							<Link
-								onClick={() => {
-									context.state.changeAnimation(slideRight);
-								}}
-								to={props.next}
-							>
-								<FaArrowRight className="arrow" />
-							</Link>
-						</div>
-					</main>
-				);
+				if (context.state.animating) {
+					return <div />;
+				} else {
+					return (
+						<main className="container arrows">
+							<div className="content">{props.children}</div>
+							<div className="overlay">
+								<Link
+									onClick={() => {
+										context.state.changeAnimation(slideLeft);
+									}}
+									to={props.previous}
+								>
+									<FaArrowLeft className="arrow" />
+								</Link>
+								<Link
+									onClick={() => {
+										context.state.changeAnimation(slideRight);
+									}}
+									to={props.next}
+								>
+									<FaArrowRight className="arrow" />
+								</Link>
+							</div>
+						</main>
+					);
+				}
 			}}
 		</Context.Consumer>
 	);
