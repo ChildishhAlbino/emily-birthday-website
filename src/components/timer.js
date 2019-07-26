@@ -12,7 +12,11 @@ class CountdownTimer extends React.Component {
 	}
 
 	componentDidMount() {
-		setInterval(this.tick.bind(this), 1000);
+		this.setState({ timer: setInterval(this.tick.bind(this), 1000) });
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.state.timer);
 	}
 
 	calcDiff(now, countdownDate) {

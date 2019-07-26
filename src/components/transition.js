@@ -1,28 +1,8 @@
 import React from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Context } from './layout';
-
+import { slideLeft } from './animations';
 const timeout = 550;
-const defaultAnimation = {
-	entering: {
-		position: `absolute`,
-		left: -2000,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	},
-	entered: {
-		position: `absolute`,
-		left: 0,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	},
-	exiting: {
-		position: `absolute`,
-		left: 2000,
-		transition: `left ${timeout}ms ease-in-out`,
-		width: '100vw'
-	}
-};
 
 class Transition extends React.PureComponent {
 	render() {
@@ -30,7 +10,7 @@ class Transition extends React.PureComponent {
 		return (
 			<Context.Consumer>
 				{(context) => {
-					const transitionAnimation = context.state.animation || defaultAnimation;
+					const transitionAnimation = context.state.animation || slideLeft;
 					return (
 						<TransitionGroup>
 							<CSSTransition
@@ -40,15 +20,17 @@ class Transition extends React.PureComponent {
 									exit: timeout
 								}}
 							>
-								{(status) => (
-									<div
-										style={{
-											...transitionAnimation[status]
-										}}
-									>
-										{children}
-									</div>
-								)}
+								{(status) => {
+									return (
+										<div
+											style={{
+												...transitionAnimation[status]
+											}}
+										>
+											{children}
+										</div>
+									);
+								}}
 							</CSSTransition>
 						</TransitionGroup>
 					);
