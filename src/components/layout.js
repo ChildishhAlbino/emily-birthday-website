@@ -7,7 +7,7 @@ import moment from 'moment';
 import Timer from '../components/timer';
 
 const Context = React.createContext();
-const countdownDate = moment('2019-07-27');
+const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-08-02') : moment('2019-08-01');
 class ContextProvider extends React.Component {
 	state = {
 		animation: null,
