@@ -1,11 +1,10 @@
 import React from 'react';
 import Image from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
-
-const FourthPage = () => {
+const FirstPage = () => {
 	const data = useStaticQuery(graphql`
-		query PageFourMarkdownQuery {
-			image: file(relativePath: { eq: "flareon.png" }) {
+		query PageOneMarkdownQuery {
+			image: file(relativePath: { eq: "eevee.png" }) {
 				childImageSharp {
 					fluid(maxWidth: 1280) {
 						...GatsbyImageSharpFluid
@@ -16,10 +15,13 @@ const FourthPage = () => {
 	`);
 	return (
 		<div className="page">
-			<h1>FLAREON</h1>
+			<h1>EEVEE</h1>
 			<Image className="gatsbyImage" alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
+			<div>
+				<p>Type: Normal </p>
+			</div>
 		</div>
 	);
 };
 
-export default FourthPage;
+export default FirstPage;

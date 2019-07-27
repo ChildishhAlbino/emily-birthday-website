@@ -1,9 +1,24 @@
 import React from 'react';
-
-const FifthPage = () => (
-	<div className="main">
-		<h1>THIS IS THE FIFTH PAGE</h1>
-	</div>
-);
+import Image from 'gatsby-image';
+import { useStaticQuery, graphql } from 'gatsby';
+const FifthPage = () => {
+	const data = useStaticQuery(graphql`
+		query PageFiveMarkdownQuery {
+			image: file(relativePath: { eq: "espeon.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 1280) {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+		}
+	`);
+	return (
+		<div className="page">
+			<h1>ESPEON</h1>
+			<Image className="gatsbyImage" alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
+		</div>
+	);
+};
 
 export default FifthPage;

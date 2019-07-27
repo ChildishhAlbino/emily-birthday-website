@@ -7,6 +7,7 @@ module.exports = {
 		author: `@ChildishhAlbino`
 	},
 	plugins: [
+		`gatsby-plugin-mdx`,
 		{
 			resolve: 'gatsby-plugin-buildtime-timezone',
 			options: {
