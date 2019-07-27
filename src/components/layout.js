@@ -7,7 +7,7 @@ import moment from 'moment';
 import Timer from '../components/timer';
 import { slideLeft } from './animations';
 const Context = React.createContext();
-const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-27T22:42') : moment('2019-08-01');
+const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-28T00:50:00') : moment('2019-08-01');
 class ContextProvider extends React.Component {
 	state = {
 		animation: slideLeft,
@@ -23,6 +23,10 @@ class ContextProvider extends React.Component {
 		countingDown: true,
 		setCountingDown: (countdownState) => {
 			this.setState({ countingDown: countdownState });
+		},
+		bypassTokens: 0,
+		attemptBypass: (increment) => {
+			this.setState({ bypassTokens: this.state.bypassTokens + (increment || 1) });
 		}
 	};
 	render() {

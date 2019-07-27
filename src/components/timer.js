@@ -46,7 +46,7 @@ class CountdownTimer extends React.Component {
 		return (
 			<Context.Consumer>
 				{(context) => {
-					if (this.state.rawDiff === 0) {
+					if (this.state.rawDiff < 0) {
 						context.state.setCountingDown(false);
 					}
 					const days = this.suffix(this.state.diff.days, 'day');
@@ -58,7 +58,16 @@ class CountdownTimer extends React.Component {
 							<h1>{days},</h1>
 							<h1>{hours},</h1>
 							<h1>{minutes},</h1>
-							<h1>{seconds}.</h1>
+							<h1
+								onClick={() => {
+									context.state.attemptBypass();
+									if (context.state.bypassTokens >= 2) {
+										context.state.setCountingDown(false);
+									}
+								}}
+							>
+								{seconds}.
+							</h1>
 						</div>
 					);
 				}}
