@@ -27,8 +27,8 @@ body {
 }
 
 .content {
+	font-size: 2rem;
 	div {
-		padding: 1em;
 		display: flex;
 		flex-flow: column nowrap;
 		align-content: center;
@@ -42,10 +42,4 @@ body {
 .content,
 .overlay {
 	grid-area: 1 / 1;
-}
-
-img {
-	align-self: center;
-	max-width: 80vw;
-	max-height: 80vh;
 }

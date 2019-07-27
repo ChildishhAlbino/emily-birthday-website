@@ -35,7 +35,7 @@ const Layout = ({ children, location }) => {
 	} else {
 		const pages = [];
 		const data = useStaticQuery(graphql`
-			query MyQuery {
+			query PagesPathQuery {
 				allSitePage {
 					edges {
 						node {
