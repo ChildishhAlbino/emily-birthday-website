@@ -7,29 +7,7 @@ module.exports = {
 		author: `@ChildishhAlbino`
 	},
 	plugins: [
-		{
-			resolve: `gatsby-plugin-mdx`,
-			options: {
-				gatsbyRemarkPlugins: [
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							backgroundColor: 'rgba(255, 255, 255, 0.0)',
-							maxWidth: 1000
-						}
-					}
-				],
-				plugins: [
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							backgroundColor: 'rgba(255, 255, 255, 0.0)',
-							maxWidth: 1000
-						}
-					}
-				]
-			}
-		},
+		`gatsby-plugin-mdx`,
 		{
 			resolve: 'gatsby-plugin-buildtime-timezone',
 			options: {
