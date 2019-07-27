@@ -25,11 +25,14 @@ body {
 	align-items: center;
 }
 
-.content {
-	@media screen and (max-width: 400px) {
-		font-size: 1.2rem;
-		margin: 0rem 5rem 0rem;
+@media screen and (max-width: 400px) {
+	.content {
+		font-size: .5rem;
+		margin: 0 1.2rem 0;
 	}
+}
+
+.content {
 	margin: 0rem 20rem 0rem;
 	font-size: 2rem;
 	display: flex;
@@ -41,12 +44,23 @@ body {
 	grid-area: 1 / 1;
 }
 
-.image {
-	@media screen and (max-width: 400px) {
-		max-width: 90vw;
-	}
-	height: auto;
-	width: auto;
+.page {
+	min-width: 20em;
 	max-width: 100rem;
+}
+
+.image {
 	align-self: center;
+}
+
+@media screen and (max-width: 400px) {
+	.page {
+		min-width: 10em;
+		max-width: 50rem;
+		align-self: center;
+	}
+
+	.image {
+		align-self: center;
+	}
 }
