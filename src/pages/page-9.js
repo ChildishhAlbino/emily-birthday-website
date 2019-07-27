@@ -16,7 +16,7 @@ const NinthPage = () => {
 	return (
 		<div className="page">
 			<h1>SYLVEON</h1>
-			<Image alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
+			<Image className="gatsbyImage" alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
 		</div>
 	);
 };

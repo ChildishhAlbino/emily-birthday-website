@@ -25,18 +25,10 @@ body {
 	align-items: center;
 }
 
-@media screen and (max-width: 400px) {
-	.content {
-		font-size: .5rem;
-		margin: 0 1.2rem 0;
-	}
-}
-
 .content {
-	margin: 0rem 20rem 0rem;
 	font-size: 2rem;
 	display: flex;
-	justify-content: center;
+	flex-flow: column nowrap;
 }
 
 .content,
@@ -44,23 +36,35 @@ body {
 	grid-area: 1 / 1;
 }
 
-.page {
-	min-width: 20em;
-	max-width: 100rem;
-}
-
 .image {
+	@media screen and (max-width: 400px) {
+		min-width: 20vw;
+		max-width: 60vw;
+	}
+	@media screen and (max-width: 700px) {
+		min-width: 1em;
+		max-width: 60vw;
+	}
+	min-width: 10em;
+	max-width: 50rem;
 	align-self: center;
 }
 
-@media screen and (max-width: 400px) {
-	.page {
-		min-width: 10em;
-		max-width: 50rem;
-		align-self: center;
-	}
+.gatsbyImage {
+	min-width: 10em;
+	width: 100%;
+	max-width: 20em;
+	align-self: center;
+}
 
-	.image {
-		align-self: center;
+.page {
+	@media screen and (max-width: 400px) {
+		font-size: 16px;
 	}
+	@media screen and (max-width: 700px) {
+		font-size: 16px;
+	}
+	margin: 0em 5em 0em;
+	display: flex;
+	flex-direction: column;
 }

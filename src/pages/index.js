@@ -2,7 +2,7 @@ import React from 'react';
 import birthdayImage from '../images/birthday-page-gif.gif';
 const IndexPage = () => {
 	return (
-		<div>
+		<div className="page">
 			<h1>
 				<i>Happy 20th Birthday Emily!!!!</i>
 			</h1>
@@ -22,7 +22,8 @@ const IndexPage = () => {
 				So click around enjoy! Right is forwards, left is backwards. (There might be a special surprise for you
 				on the last slide)
 			</p>
-			<img className="image" src={birthdayImage} alt="Birthday Pikachu and Togepi." />
+
+			<img className="image" src={birthdayImage} alt="Birthday Pikachu and Togepi Gif." />
 		</div>
 	);
 };

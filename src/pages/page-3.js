@@ -17,7 +17,7 @@ const ThirdPage = () => {
 	return (
 		<div className="page">
 			<h1>JOLTEON</h1>
-			<Image alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
+			<Image className="gatsbyImage" alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
 		</div>
 	);
 };

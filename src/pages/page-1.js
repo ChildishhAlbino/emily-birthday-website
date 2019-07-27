@@ -16,7 +16,10 @@ const FirstPage = () => {
 	return (
 		<div className="page">
 			<h1>EEVEE</h1>
-			<Image alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
+			<Image className="gatsbyImage" alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
+			<div>
+				<p>Type: Normal </p>
+			</div>
 		</div>
 	);
 };
