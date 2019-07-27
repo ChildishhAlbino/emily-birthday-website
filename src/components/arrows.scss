@@ -1,8 +1,15 @@
 .arrow {
+	font-size: 10vmax;
 	opacity: 0.05;
 	color: white;
 }
 .arrow:hover {
 	color: #663399;
 	opacity: 0.2;
+}
+
+@media screen and (max-width: 400px) {
+	.arrow {
+		font-size: 3.5rem;
+	}
 }

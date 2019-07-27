@@ -19,7 +19,6 @@ body {
 }
 
 .overlay {
-	font-size: 10vmax;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
@@ -27,19 +26,27 @@ body {
 }
 
 .content {
-	font-size: 2rem;
-	div {
-		display: flex;
-		flex-flow: column nowrap;
-		align-content: center;
-		justify-content: center;
+	@media screen and (max-width: 400px) {
+		font-size: 1.2rem;
+		margin: 0rem 5rem 0rem;
 	}
+	margin: 0rem 20rem 0rem;
+	font-size: 2rem;
 	display: flex;
-	align-content: center;
 	justify-content: center;
 }
 
 .content,
 .overlay {
 	grid-area: 1 / 1;
+}
+
+.image {
+	@media screen and (max-width: 400px) {
+		max-width: 90vw;
+	}
+	height: auto;
+	width: auto;
+	max-width: 100rem;
+	align-self: center;
 }
