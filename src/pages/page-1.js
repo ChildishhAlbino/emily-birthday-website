@@ -22,7 +22,7 @@ const FirstPage = () => {
 					<h3>Normal Type Pokemon | Related Star Signs: Aquarius, Virgo</h3>
 				</div>
 				<p>
-					Eevee is the sign of adaptability. It's unstable DNA allow it to quickly and sporadically change
+					Eevee is the sign of adaptability. It's unstable DNA allows it to quickly and sporadically change
 					it's body to suit it's circumstance or environment better. People who prominently express the
 					qualities of Eevee have the greatest hidden potential of any of the Eeviac signs.
 				</p>
