@@ -16,7 +16,7 @@ const IndexPage = () => {
 			</p>
 			<p>
 				A little birdie told me that you're a big fan of Eevee and the zodiac so I thought I'd combine the two
-				and produce "Eeviac"
+				and produce the "Eeviac"
 			</p>
 			<p>
 				The Eeviac works on the principle that all beings contain elements from every sign, rather than
