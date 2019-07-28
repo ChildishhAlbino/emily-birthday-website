@@ -28,8 +28,9 @@ const FirstPage = () => {
 				</p>
 				<p>
 					Eevee stans are potentially going to experience serious changes in the coming months as Pokemon as
-					the Sword and Shield cover the Sun and Moon. During this time, you may realise your hidden potential
-					and feel more at home with yourself and your Eeviac sign.
+					the Sword and Shield cover the Sun and Moon; this event is also known as Generation Eightrograde.
+					During this time, you may realise your hidden potential and feel more at home with yourself and your
+					Eeviac sign.
 				</p>
 			</div>
 		</div>
