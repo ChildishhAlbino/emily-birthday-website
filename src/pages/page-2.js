@@ -31,7 +31,8 @@ const SecondPage = () => {
 				<p>
 					Vaporeon stans are the safest of all the other signs during the time of Generation Eightrograde as
 					they will always keep their head above water. You may experience some rough tides in the coming
-					months, but be sure of yourself and you will pull through.
+					months, but be sure of yourself and you will pull through. A strong bond with Flareon and Umbreon
+					stans should see you through high tides and into the rest of your life.
 				</p>
 			</div>
 		</div>
