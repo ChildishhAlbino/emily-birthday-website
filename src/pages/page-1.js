@@ -23,8 +23,8 @@ const FirstPage = () => {
 				</div>
 				<p>
 					Eevee is the sign of adaptability. It's unstable DNA allow it to quickly and sporadically change
-					it's body to suit it's circumstance or environment better. People who prominently represent that of
-					Eevee have the greatest hidden potential of any of the Eeviac signs.
+					it's body to suit it's circumstance or environment better. People who prominently express the
+					qualities of Eevee have the greatest hidden potential of any of the Eeviac signs.
 				</p>
 				<p>
 					Eevee stans are potentially going to experience serious changes in the coming months as Pokemon as
