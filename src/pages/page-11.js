@@ -18,7 +18,7 @@ const EleventhPage = () => {
 			<h1>INTRODUCING... K/DA EMILY</h1>
 			<Image className="gatsbyImage" alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
 			<p>Artwork by ShyGirl @ Sketchmob</p>
-			<a href="https://imgur.com/m83JUgg">Click here to open in a new tab to download.</a>
+			<a href="https://i.imgur.com/m83JUgg.png">Click here to open in a new tab to download.</a>
 		</div>
 	);
 };
