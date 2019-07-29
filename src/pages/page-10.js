@@ -69,7 +69,7 @@ const TenthPage = () => {
 				<img className="image" alt="memeImages" src={memeTwentyThree} />
 			</div>
 			<p>I hope you've enjoyed everything so far, but I have one last little present for you.</p>
-			<p>Head over to the next page to see the newest member of KDA!</p>
+			<p>Head over to the next page to see the newest member of K/DA!</p>
 		</div>
 	);
 };
