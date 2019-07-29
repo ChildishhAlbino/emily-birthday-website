@@ -4,9 +4,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 const EleventhPage = () => {
 	const data = useStaticQuery(graphql`
 		query PageElevenMarkdownQuery {
-			image: file(relativePath: { eq: "kda-emily.png" }) {
+			image: file(relativePath: { eq: "kda-emily-cropped.png" }) {
 				childImageSharp {
-					fluid(maxWidth: 3940, quality: 100) {
+					fluid(maxWidth: 1924, quality: 100) {
 						...GatsbyImageSharpFluid
 					}
 				}
