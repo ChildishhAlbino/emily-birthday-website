@@ -6,8 +6,10 @@ import Arrows from './arrows';
 import moment from 'moment';
 import Timer from '../components/timer';
 import { slideLeft } from './animations';
+import { Helmet } from 'react-helmet';
+
 const Context = React.createContext();
-const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-28T00:50:00') : moment('2019-08-01');
+const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-30T00:50:00') : moment('2019-08-01');
 class ContextProvider extends React.Component {
 	state = {
 		animation: slideLeft,
@@ -37,7 +39,9 @@ class ContextProvider extends React.Component {
 const Layout = ({ children, location }) => {
 	return (
 		<div>
-			<header siteTitle="Happy Birthday Emily" />
+			<Helmet>
+				<title>Happy Birthday Emily!!!!</title>
+			</Helmet>
 			<ContextProvider>
 				<div>
 					<Context.Consumer>
