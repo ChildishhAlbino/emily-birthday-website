@@ -26,6 +26,9 @@ body {
 }
 
 .content {
+	@media screen and (max-width: 400px) {
+		font-size: 20px;
+	}
 	font-size: 2rem;
 	display: flex;
 	flex-flow: column nowrap;
@@ -45,9 +48,11 @@ body {
 		min-width: 1em;
 		max-width: 60vw;
 	}
+	display: flex;
 	min-width: 10em;
-	max-width: 60rem;
+	max-width: 30rem;
 	align-self: center;
+	justify-self: center;
 	margin: 1rem;
 }
 
@@ -70,4 +75,21 @@ body {
 	margin: 0em 10em 0em;
 	display: flex;
 	flex-direction: column;
+}
+
+.memesContainer {
+	@media screen and (max-width: 1900px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (max-width: 1500px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	img,
+	video {
+		width: 65vw;
+		max-width: 500px;
+	}
+	grid-template-columns: repeat(3, 1fr);
+	display: grid;
+	justify-content: center;
 }
