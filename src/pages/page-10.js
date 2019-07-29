@@ -42,11 +42,11 @@ const TenthPage = () => {
 				<img className="image" alt="memeImages" src={memeFour} />
 				<img className="image" alt="memeImages" src={memeSeven} />
 				<img className="image" alt="memeImages" src={memeEight} />
-				<img className="image" alt="memeImages" src={memeNine} />
+				<img className="image" alt="memeImages" src={memeTen} />
 				<img className="image" alt="memeImages" src={memeEighteen} />
 				<img className="image" alt="memeImages" src={memeTwentyFour} />
 				<img className="image" alt="memeImages" src={memeEleven} />
-				<img className="image" alt="memeImages" src={memeTen} />
+				<img className="image" alt="memeImages" src={memeNine} />
 				<img className="image" alt="memeImages" src={memeTwelve} />
 				<img className="image" alt="memeImages" src={memeThirteen} />
 				<img className="image" alt="memeImages" src={memeFourteen} />
