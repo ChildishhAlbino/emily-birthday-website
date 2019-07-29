@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
+html {
+	font-size: 15px;
+}
+
 body::-webkit-scrollbar {
 	display: none; // Safari and Chrome
 }
@@ -8,9 +12,9 @@ body {
 	background-image: url('../images/website-background.png');
 	color: white;
 	font-family: "Oswald";
-	text-align: center;
 	-ms-overflow-style: none; // IE 10+
 	scrollbar-width: none; // Firefox
+	text-align: center;
 }
 
 a {
@@ -19,6 +23,7 @@ a {
 
 .container {
 	height: 100vh;
+	min-width: fit-content;
 	display: grid;
 }
 
@@ -30,12 +35,9 @@ a {
 }
 
 .content {
-	@media screen and (max-width: 400px) {
-		font-size: 20px;
-	}
-	font-size: 2rem;
-	display: flex;
-	flex-flow: column nowrap;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
 }
 
 .content,
@@ -61,21 +63,26 @@ a {
 }
 
 .gatsbyImage {
-	min-width: 10em;
+	@media screen and (max-width: 400px) {
+		min-width: 8rem;
+		max-width: 20rem;
+	}
+	min-width: 12rem;
 	width: 100%;
-	max-width: 20em;
+	max-width: 20rem;
 	align-self: center;
 }
 
 .page {
 	@media screen and (max-width: 400px) {
-		font-size: 16px;
-		margin: 0em 5em 0em;
+		font-size: 0.7rem;
+		margin: 0em 5rem 0em;
 	}
 	@media screen and (max-width: 700px) {
-		font-size: 16px;
-		margin: 0em 7em 0em;
+		font-size: 1rem;
+		margin: 0em 6rem 0em;
 	}
+	font-size: 2rem;
 	margin: 0em 10em 0em;
 	display: flex;
 	flex-direction: column;
@@ -101,5 +108,4 @@ a {
 footer {
 	display: flex;
 	justify-content: center;
-	margin: 1em;
 }
