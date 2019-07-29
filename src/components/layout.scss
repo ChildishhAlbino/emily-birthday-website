@@ -2,6 +2,7 @@
 
 html {
 	font-size: 15px;
+	text-align: center;
 }
 
 body::-webkit-scrollbar {
@@ -63,11 +64,6 @@ a {
 }
 
 .gatsbyImage {
-	@media screen and (max-width: 400px) {
-		min-width: 8rem;
-		max-width: 20rem;
-	}
-	min-width: 12rem;
 	width: 100%;
 	max-width: 20rem;
 	align-self: center;
@@ -107,5 +103,5 @@ a {
 
 footer {
 	display: flex;
-	justify-content: center;
+	flex-flow: column nowrap;
 }

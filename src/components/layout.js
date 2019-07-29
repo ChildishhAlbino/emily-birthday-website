@@ -64,6 +64,10 @@ const Layout = ({ children, location }) => {
 														}
 													}
 												}
+												site {
+													buildTime
+													buildTimeZone
+												}
 											}
 										`}
 										render={(data) => {
@@ -95,6 +99,7 @@ const Layout = ({ children, location }) => {
 																<h3>
 																	Page {pageIndex + 1}/{pages.length}
 																</h3>
+																<p>Page last built: {data.site.buildTimeZone}</p>
 															</footer>
 														</PageTransition>
 														<Arrows
