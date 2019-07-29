@@ -27,11 +27,10 @@ const FirstPage = () => {
 					qualities of Eevee have the greatest hidden potential of any of the Eeviac signs.
 				</p>
 				<p>
-					Eevee stans are potentially going to experience serious changes in the coming months as Pokemon as
-					the Sword and Shield cover the Sun and Moon; this event is also known as Generation Eightrograde.
-					During this time, you may realise your hidden potential and feel more at home with yourself and your
-					Eeviac sign. Eevee stans will be served well by conversing with all other signs to accelerate this
-					process.
+					Eevee stans are potentially going to experience serious changes in the coming months as the Sword
+					and Shield cover the Sun and Moon; this event is also known as Generation Eightrograde. During this
+					time, you may realise your hidden potential and feel more at home with yourself and your Eeviac
+					sign. Eevee stans will be served well by conversing with all other signs to accelerate this process.
 				</p>
 			</div>
 		</div>
