@@ -36,70 +36,80 @@ class ContextProvider extends React.Component {
 
 const Layout = ({ children, location }) => {
 	return (
-		<ContextProvider>
-			<div>
-				<Context.Consumer>
-					{(context) => {
-						if (context.state.countingDown && moment().isSameOrBefore(context.state.countdownDate)) {
-							return (
-								<main>
-									<Timer countdownDate={context.state.countdownDate} />
-								</main>
-							);
-						} else {
-							return (
-								<StaticQuery
-									query={graphql`
-										query PagesPathQuery {
-											allSitePage {
-												edges {
-													node {
-														path
+		<div>
+			<header siteTitle="Happy Birthday Emily" />
+			<ContextProvider>
+				<div>
+					<Context.Consumer>
+						{(context) => {
+							if (context.state.countingDown && moment().isSameOrBefore(context.state.countdownDate)) {
+								return (
+									<main>
+										<Timer countdownDate={context.state.countdownDate} />
+									</main>
+								);
+							} else {
+								return (
+									<StaticQuery
+										query={graphql`
+											query PagesPathQuery {
+												allSitePage {
+													edges {
+														node {
+															path
+														}
 													}
 												}
 											}
-										}
-									`}
-									render={(data) => {
-										const pages = [];
-										data.allSitePage.edges.forEach((element) => {
-											const path = element.node.path;
-											if (!path.includes('404')) {
-												pages.push(path);
+										`}
+										render={(data) => {
+											const pages = [];
+											data.allSitePage.edges.forEach((element) => {
+												const path = element.node.path;
+												if (!path.includes('404')) {
+													pages.push(path);
+												}
+											});
+											const pageIndex = pages.indexOf(location.pathname);
+											let nextPageIndex = pageIndex + 1;
+											let previousPageIndex = pageIndex - 1;
+											if (pageIndex === 0) {
+												previousPageIndex = pages.length - 1;
 											}
-										});
-										const pageIndex = pages.indexOf(location.pathname);
-										let nextPageIndex = pageIndex + 1;
-										let previousPageIndex = pageIndex - 1;
-										if (pageIndex === 0) {
-											previousPageIndex = pages.length - 1;
-										}
-										if (pageIndex === pages.length - 1) {
-											nextPageIndex = 0;
-										}
-										if (!location.state) {
-											location.state = {};
-										}
-										return (
-											<main className="container">
-												<PageTransition location={location}>
-													<div className="content">{children}</div>
-												</PageTransition>
-												<Arrows
-													className="overlay"
-													next={pages[nextPageIndex]}
-													previous={pages[previousPageIndex]}
-												/>
-											</main>
-										);
-									}}
-								/>
-							);
-						}
-					}}
-				</Context.Consumer>
-			</div>
-		</ContextProvider>
+											if (pageIndex === pages.length - 1) {
+												nextPageIndex = 0;
+											}
+											if (!location.state) {
+												location.state = {};
+											}
+											return (
+												<div>
+													<main className="container">
+														<PageTransition location={location}>
+															<div className="content">{children}</div>
+															<footer>
+																<h3>
+																	Page {pageIndex + 1}/{pages.length}
+																</h3>
+															</footer>
+														</PageTransition>
+														<Arrows
+															className="overlay"
+															next={pages[nextPageIndex]}
+															previous={pages[previousPageIndex]}
+														/>
+													</main>
+												</div>
+											);
+										}}
+									/>
+								);
+							}
+						}}
+					</Context.Consumer>
+				</div>
+			</ContextProvider>
+		</div>
 	);
 };
 
