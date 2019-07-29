@@ -9,7 +9,7 @@ import { slideLeft } from './animations';
 import { Helmet } from 'react-helmet';
 
 const Context = React.createContext();
-const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-30T00:50:00') : moment('2019-08-01');
+const countdownDate = process.env.NODE_ENV === 'development' ? moment('2019-07-29T00:50:00') : moment('2019-08-01');
 class ContextProvider extends React.Component {
 	state = {
 		animation: slideLeft,
