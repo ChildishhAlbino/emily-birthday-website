@@ -7,7 +7,7 @@ import memeFive from '../images/emily-memes-5.png';
 import memeSix from '../images/emily-memes-6.jpg';
 import memeSeven from '../images/emily-memes-7.png';
 import memeEight from '../images/emily-memes-8.png';
-import memeNine from '../images/emily-memes-9.png';
+// import memeNine from '../images/emily-memes-9.png';
 import memeTen from '../images/emily-memes-10.png';
 import memeEleven from '../images/emily-memes-11.png';
 import memeTwelve from '../images/emily-memes-12.jpg';
@@ -42,7 +42,7 @@ const TenthPage = () => {
 				<img className="image" alt="memeImages" src={memeFour} />
 				<img className="image" alt="memeImages" src={memeSeven} />
 				<img className="image" alt="memeImages" src={memeEight} />
-				<img className="image" alt="memeImages" src={memeNine} />
+				{/* <img className="image" alt="memeImages" src={memeNine} /> */}
 				<img className="image" alt="memeImages" src={memeEighteen} />
 				<img className="image" alt="memeImages" src={memeTwentyFour} />
 				<img className="image" alt="memeImages" src={memeEleven} />
