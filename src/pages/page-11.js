@@ -19,7 +19,7 @@ const EleventhPage = () => {
 			<Image className="gatsbyImage" alt={'Eevee'} fluid={data.image.childImageSharp.fluid} />
 			<p>Artwork by ShyGirl @ Sketchmob</p>
 
-			<a target="_blank" rel="noopener noreferrer" href="https://i.imgur.com/m83JUgg.png">
+			<a target="_blank" rel="noopener noreferrer" href="https://i.imgur.com/C5VSRmX.png">
 				Click the link to download!
 			</a>
 		</div>
