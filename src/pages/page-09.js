@@ -28,10 +28,10 @@ const NinthPage = () => {
 				</p>
 				<p>
 					Sylveon stans are the least experienced with the rough times that occur during Generation
-					Eightrograde. Their optimism brings those who align more directly with the other Eeviac signs find
-					themselves smiling at the thought of being so young once again. A playful friend for all who just
-					needs a guiding hand in life. Sylveon stans should console Vaporeon, Espeon, and Flareon stans for
-					advice, and will have an especially strong bond with Jolteon stans.
+					Eightrograde. Their optimism brings those who align more directly with the other Eeviac signs to
+					find themselves smiling at the thought of being so young once again. A playful friend for all who
+					just needs a guiding hand in life. Sylveon stans should console Vaporeon, Espeon, and Flareon stans
+					for advice, and will have an especially strong bond with Jolteon stans.
 				</p>
 			</div>
 		</div>
