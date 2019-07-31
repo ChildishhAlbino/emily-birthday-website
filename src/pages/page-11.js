@@ -6,7 +6,7 @@ const EleventhPage = () => {
 		query PageElevenMarkdownQuery {
 			image: file(relativePath: { eq: "kda-emily-cropped.png" }) {
 				childImageSharp {
-					fluid(maxWidth: 1924, quality: 100) {
+					fluid(maxWidth: 1924) {
 						...GatsbyImageSharpFluid
 					}
 				}
